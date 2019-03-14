@@ -33,9 +33,6 @@ public class NumberGuessing {
         else if (userNumber < pickedNumber) {
             System.out.println("You picked a lower number.");
         }
-        else if (userNumber == pickedNumber) {
-            System.out.println("You guessed the correct number.");
-        }
 
 
 
