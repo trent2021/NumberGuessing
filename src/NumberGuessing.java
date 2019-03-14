@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class NumberGuessing {
 
-    public static void main(String[]args) {
+    public static void main(String[] args) {
 
         Scanner keyboard;
         int userNumber;
@@ -15,34 +15,21 @@ public class NumberGuessing {
         pickedNumber = (int) (Math.random() * 100);
 
 
-        System.out.println("The random number is");
-        System.out.println(pickedNumber);
+        boolean answer = true;
+        while (answer) {
+            System.out.println("Type a number from 1 to 100.");
+            userNumber = keyboard.nextInt();
 
-        System.out.println("Type a number from 1 to 100.");
-        userNumber = keyboard.nextInt();
+            if (userNumber < pickedNumber) {
+                System.out.println("You picked a lower number.");
+            } else if (userNumber > pickedNumber) {
+                System.out.println("You picked a higher number.");
+            } else{
+                System.out.println("You picked the correct number.");
+                answer = false;
+            }
 
-        if (userNumber < 1) {
-            System.out.println("That number is not from 1 to 100.");
+
         }
-        else if (userNumber > 100) {
-            System.out.println("That number is not from 1 to 100.");
-        }
-        else if (userNumber > pickedNumber) {
-            System.out.println("You picked a higher number.");
-        }
-        else if (userNumber < pickedNumber) {
-            System.out.println("You picked a lower number.");
-        }
-
-
-
-
-
-
-
-
-
-
-
     }
 }
